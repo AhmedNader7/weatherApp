@@ -1,0 +1,181 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: linear-gradient(300deg, #EA489C, #AE54EE, #4087F6);
+    --text-color: #ffffff;
+    --second-color-text: rgba(255, 255, 255, 0.7);
+}
+
+/* Dark Mode Variables */
+body.dark-mode {
+    --background-color: linear-gradient(300deg, #0B101A, #161E26, #2A333D);
+    --text-color: #ffffff;
+    --second-color-text: rgba(255, 255, 255, 0.7);
+    
+}
+
+.gradient-background {
+    background: var(--background-color);
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+}
+    50% {
+        background-position: 100% 50%;
+}
+    100% {
+        background-position: 0% 50%;
+}
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, "sans-serif";
+    transition: all 0.5s ease;
+    color: var(--text-color);
+    position: relative;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+    color: inherit;
+}
+
+p {
+    line-height: 1.8;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0 0 10px 10px;
+}
+
+.nav-btn {
+    background-color: rgba(255, 255, 255, 0.4 );
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.6 )
+}
+
+.logo {    
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.logo i {
+    margin-right: 5px;
+    font-size: 25px;
+}
+
+.toggle i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+header h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 20px;
+    color: var(--second-color-text);
+}
+
+#searchButton {
+    position: absolute;
+    right: 60px;
+    top: 65px;
+}
+
+.search-container {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.4 );
+    border-radius: 10px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4 );
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: 0px;
+}
+
+.search-container input:focus {
+    border-width: 3px;
+}
+
+.search-container input::placeholder {
+    color: var(--second-color-text);
+}
+
+.humidity i {
+    font-size: 20px;
+    color: #93C5FD;
+}
+
+.wind i {
+    font-size: 20px;
+    color: #86EFAC;
+}
+
+.card h4 {
+    font-size: 20px;
+}
+
+.card p {
+    color: var(--second-color-text);
+}
+
+.card h3 {
+    font-weight: 800;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4 );
+    color: var(--text-color);
+    border-radius: 10px;
+}
+
+.weather img {
+    width: 100px;
+    height: 100px;
+}
+
+.weather {
+    padding: 30px;
+}
+
+.forecast {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4 );
+    border-radius: 10px;
+    padding: 20px;
+}
+

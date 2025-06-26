@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Amatic+SC:wght@400;700&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bree+Serif&family=Delius+Swash+Caps&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Overpass:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body class="gradient-background">
+
+        <nav class="navbar">
+            <div class="container">
+                <a href="./index.html" class="logo"><i class="fa-solid fa-cloud-sun"></i>NR WeatherPro</a>
+                <div class="toggle">
+                    <i class="fa-regular fa-sun"></i>
+                </div>
+                <button class="btn nav-btn" >Logout</button>
+            </div>
+        </nav>
+
+        <header class="mt-5 pt-5">
+            <div class="container text-center">
+                <h1>Your Weather Companion</h1>
+                <p>Get accurate weather forecasts for any location worldwide</p>
+            </div>
+        </header>
+
+        <section class="mt-5 pt-5">
+            <div class="container">
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search..." id="searchInput">
+                        <button id="searchButton" class="btn btn-primary">Search</button>
+                    </div>
+
+                </div>
+            </div>
+        </section> 
+
+        <section class="mt-5 pt-5">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                        <div class="weather text-center">
+                            <img id="mainIcon" src="" alt="">
+                            <h3 id="cityName" class="city-name"></h3>
+                            <h3 class="temp"><span id="tempNumber"></span><sup>o</sup>C</h3>
+                            <p id="conditionText" class="card-text"></p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="humidity">
+                                <div class="d-flex justify-content-between p-3">
+                                    <h4>Humidity</h4>
+                                    <i class="fa-solid fa-droplet"></i>
+                                </div>
+                                <div class="p-3 pt-1">
+                                    <h3 id="humidityNumber"></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="wind">
+                                <div class="d-flex justify-content-between p-3">
+                                    <h4>Wind Speed</h4>
+                                    <i class="fa-solid fa-wind"></i>
+                                </div>
+                                <div class="p-3 pt-1">
+                                    <h3 id="WindNumber"></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-5 pt-5">
+            <div class="container forecast">
+                <h3 class="pb-4 pt-4">5-Days Forecast</h3>
+                <div class="row row-cols-1 row-cols-md-5 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="day-one card-body text-center">
+                            <p id="day" class="card-title"></p>
+                            <img id="dayImg" src="" alt="">
+                            <h4 id="dayTempNum" class="card-text"></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="day-two card-body text-center">
+                            <p id="day" class="card-title"></p>
+                            <img id="dayImg" src="" alt="">
+                            <h4 id="dayTempNum" class="card-text"></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="day-three card-body text-center">
+                            <p id="day" class="card-title"></p>
+                            <img id="dayImg" src="" alt="">
+                            <h4 id="dayTempNum" class="card-text"></h4>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col">
+                        <div class="card h-100">
+                        <div class="day-four card-body text-center">
+                            <p id="day" class="card-title"></p>
+                            <img id="dayImg" src="" alt="">
+                            <h4 id="dayTempNum" class="card-text"></h4>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                        <div class="day-five card-body text-center">
+                            <p id="day" class="card-title"></p>
+                            <img id="dayImg" src="" alt="">
+                            <h4 id="dayTempNum" class="card-text"></h4>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+        <script src="./js/index.js"></script>
+    </body>
+</html>
